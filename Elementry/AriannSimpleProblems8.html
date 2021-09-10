@@ -1,0 +1,86 @@
+<!-- https://adriann.github.io/programming_problems.html
+Simple Programming Problems -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementary Programming Problems -8</title>
+    <!-- Program for prime numbers -->
+    <style>
+        body{
+            height: 100vh;
+            display: block;
+            align-items: center;
+            background: linear-gradient(#28b487, #7dd56f);
+        }
+        h1{
+            font-size: 40px;
+            text-align: center;
+            color: white;
+            margin: auto;
+        }
+        button{
+            text-align: center;
+            background-color: blue;
+            height: 30px;
+            width: 30px;
+            margin: auto;
+        }
+        h2{
+            font-size: 40px;
+            text-align: center;
+            color: white;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 id="Texto">Numeros Primos
+    </h1>
+
+    <h2 id="numPrimos"></h2>
+
+    <button onclick="numPrimos(2)"></button>
+
+    <script>
+        
+        
+        function numPrimos(numero){
+            var contador = 2;
+            var arrayPrimos = [2];
+            
+            while (contador <=  numero){
+                var divisible = numero / contador;
+                var resto = numero % contador;
+                if(divisible === 1){
+                    arrayPrimos.push(numero);
+                    console.log(arrayPrimos);
+                    numero ++;  
+                    contador = 2;
+                } else {
+                    if(resto === 0){
+                        contador = 2;
+                        numero ++;
+                    } else {
+                        contador ++
+                    }
+                }
+            }
+        }
+
+       /*  function getValue () {
+            var multiplo = document.getElementById("number").value;
+            multiplo = parseInt(multiplo); 
+            console.log(multiplo)
+            return multiplo;
+        } */
+        function print(arrayNumPrimos) {
+            var printNumPrimo = document.getElementById("numPrimos");
+            printNumPrimoo.innerHTML = arrayNumPrimos;
+        }        
+    </script>
+</body>
+</html>

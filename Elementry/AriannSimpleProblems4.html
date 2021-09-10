@@ -1,0 +1,74 @@
+<!-- https://adriann.github.io/programming_problems.html
+Simple Programming Problems -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementary Programming Problems -4</title>
+    <style>
+        body{
+            height: 100vh;
+            display: block;
+            align-items: center;
+            background: linear-gradient(#28b487, #7dd56f);
+        }
+        h1{
+            font-size: 40px;
+            text-align: center;
+            color: white;
+            margin: auto;
+        }
+        button{
+            text-align: center;
+            background-color: blue;
+            height: 30px;
+            width: 30px;
+            margin: auto;
+        }
+        h2{
+            font-size: 40px;
+            text-align: center;
+            color: white;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 id="Texto">Enter a number
+        <input type="text" id="number" placeholder="Enter Number">
+        <input type="checkbox" checked>
+    
+    <button onclick="getNumber()"></button>
+    </h1>
+
+    <h2 id="printSum"></h2>
+    <script>
+        function getNumber () {
+            var number = document.getElementById("number").value;
+            number = parseInt(number);
+            var sum = 0;
+            if (number === 1) {
+                sum = 1;
+                console.log(sum)
+                var printSum = document.getElementById("printSum");
+                printSum.innerHTML = "El resultado de la suma es " + sum;
+            }
+            else {
+                var numConsecutivo = 0;
+                while(numConsecutivo < number) {
+                    numConsecutivo = numConsecutivo + 1;
+                    sum = sum + numConsecutivo;
+                }       
+                console.log(sum)
+                var printSum = document.getElementById("printSum");
+                printSum.innerHTML = "El resultado de la suma es " + sum;
+            }
+            
+            
+        }
+    </script>
+</body>
+</html>

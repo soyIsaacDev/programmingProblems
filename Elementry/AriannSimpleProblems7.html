@@ -1,0 +1,91 @@
+<!-- https://adriann.github.io/programming_problems.html
+Simple Programming Problems 
+Falta manipular las Tablas
+
+Imprime en pantalla
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementary Programming Problems -7</title>
+    <style>
+        body{
+            height: 100vh;
+            display: block;
+            align-items: center;
+            background: linear-gradient(#28b487, #7dd56f);
+        }
+        h1{
+            font-size: 40px;
+            text-align: center;
+            color: white;
+            margin: auto;
+        }
+        button{
+            text-align: center;
+            background-color: blue;
+            height: 30px;
+            width: 30px;
+            margin: auto;
+        }
+        h2{
+            font-size: 40px;
+            text-align: center;
+            color: white;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 id="Texto">Tabla de multiplicar
+        <input type="text" id="number" placeholder="Que tabla buscas?">
+        <input type="checkbox" checked>
+    
+    <button onclick="tablaMultiplicar(getValue())"></button>
+    </h1>
+
+    <h2 id="printTable"></h2>
+
+    <table>
+        <tr>
+          <th>Multiplo</th>
+          <th>Por</th>
+          <th>Resultado</th>
+        </tr>
+        <tr>
+          <td id="multiplo"></td>
+          <td>x 1</td>
+          <td>=</td>
+        </tr>
+        <tr>
+          <td id="multiplo"></td>
+          <td>x 2</td>
+        </tr>
+      </table>
+
+      
+    <script>
+        function getValue () {
+            var multiplo = document.getElementById("number").value;
+            multiplo = parseInt(multiplo); 
+            console.log(multiplo)
+            return multiplo;
+        }
+        function print(multiplicacion) {
+            var printMultiplo = document.getElementById("multiplo");
+            printMultiplo.innerHTML = multiplicacion;
+        }
+        // revisar como imprimpir una tabla;
+        function tablaMultiplicar(multiplo) {
+            
+            console.log(multiplo);
+            print(multiplo);
+            
+        }
+    </script>
+</body>
+</html>
